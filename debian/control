@@ -3,15 +3,16 @@ Section: libs
 Priority: optional
 Maintainer: gtkpod Maintainers <pkg-gtkpod-devel@alioth-lists.debian.net>
 Uploaders: Yves-Alexis Perez <corsac@debian.org>
-Standards-Version: 4.5.1
+Standards-Version: 4.6.2
 Build-Depends: autoconf-archive,
-               cython3,
-               debhelper-compat (= 12),
+               cython3-legacy,
+               debhelper-compat (= 13),
+               dh-sequence-python3,
                dh-python,
-               libglib2.0-dev (>= 2.14.1),
+               libglib2.0-dev,
                libssl-dev,
                libplist-dev (>= 2.2.0),
-               libusb-1.0-0-dev (>= 1.0.3) [linux-any],
+               libusb-1.0-0-dev [linux-any],
                libusbmuxd-dev (>= 2.0.2),
                python3-dev,
                python3-plist
@@ -99,6 +100,7 @@ Package: libimobiledevice-doc
 Architecture: all
 Section: doc
 Depends: libjs-jquery, ${misc:Depends}
+Multi-Arch: foreign
 Description: Library for communicating with iPhone and other Apple devices (documentation)
  libimobiledevice is a library that talks the native Apple USB protocols that
  the iPhone, iPad and iPod Touch use. Unlike other projects, libimobiledevice

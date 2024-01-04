@@ -1,3 +1,31 @@
+libimobiledevice (1.3.0-7.1) unstable; urgency=medium
+
+  * Team upload.
+  * debian/control: Build-Depends on cython3-legacy instead of
+    cython3 to avoid FTBFS with cython3 3.x. (Closes: #1056812)
+  * debian/control: Build-depends on dh-sequence-python3 instead
+    of dh-python. (See #1022985)
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 29 Nov 2023 10:02:11 -0500
+
+libimobiledevice (1.3.0-7) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Boyuan Yang ]
+  * Bump Standards-Version to 4.6.2.
+
+  [ Debian Janitor ]
+  * debian/control: Remove constraints unnecessary since buster.
+  * debian/control: Apply multi-arch hints:
+    + libimobiledevice-doc: Add Multi-Arch: foreign.
+    + Bump debhelper from old 12 to 13.
+  * debian/rules: Drop --fail-missing argument to dh_missing, which
+    is now the default.
+  * debian/rules: Avoid explicitly specifying -Wl,--as-needed linker flag.
+
+ -- Boyuan Yang <byang@debian.org>  Mon, 31 Jul 2023 23:50:02 -0400
+
 libimobiledevice (1.3.0-6) unstable; urgency=medium
 
   * d/control: drop some unused build-deps (Closes: #980831)
