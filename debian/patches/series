@@ -2,3 +2,4 @@
 0002-mobilebackup2-Set-DeviceLink-version-to-400-to-suppo.patch
 0003-screenshotr-Set-DeviceLink-version-to-400-to-support.patch
 0004-debugserver-Fix-service-startup-for-iOS-14b4.patch
+CVE-2026-116260.patch
